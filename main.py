@@ -1,4 +1,5 @@
 import clickjack
+import header_scanner
 
 def main():
     # Specify the URLs you want to scan for clickjacking vulnerabilities
@@ -6,7 +7,9 @@ def main():
 
     for url in urls:
         print(f"Scanning vulnerability for URL: {url}")
-        clickjack.check_clickjacking(url)
+        # clickjack.check_clickjacking(url)
+        r = header_scanner.scan_headers(url)
+        print("Result: ", r)
 
 if __name__ == "__main__":
     main()
