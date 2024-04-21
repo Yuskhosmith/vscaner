@@ -7,7 +7,6 @@ def main():
 
     for url in urls:
         print(f"Scanning vulnerability for URL: {url}")
-        # clickjack.check_clickjacking(url)
         r = header_scanner.scan_headers(url)
         print("Result: ", r)
 

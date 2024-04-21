@@ -4,7 +4,7 @@ HEADERS = {
             'definition': "X-Frame-Options tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking. Recommended value \"X-Frame-Options: SAMEORIGIN\".",
             'fix': 'Set X-Frame-Options header to "SAMEORIGIN"',
             'fix-steps': [
-                'Set X-Frame-Options header to "SAMEORIGIN"',
+                'Set X-Frame-Options header to "SAMEORIGIN" or "DENY" to prevent clickjacking attacks',
                 'Implement Content Security Policy (CSP) to provide additional protection against clickjacking attacks'
             ]
         },
@@ -44,7 +44,7 @@ HEADERS = {
             'fix': 'Set Referrer-Policy header to "strict-origin-when-cross-origin"',
             'fix-steps': [
                 'Set Referrer-Policy header to "strict-origin-when-cross-origin"',
-                'Consider setting Referrer-Policy header to "same-origin"',
+                'Consider setting Referrer-Policy header to "same-origin", "no-referrer" or "no-referrer-when-downgrade" based on your requirements',
                 'Implement additional access controls and authentication mechanisms to protect sensitive data'
             ]
         },

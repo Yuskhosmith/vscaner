@@ -8,19 +8,7 @@ def scan_headers(url):
         
         # Extract headers from the response
         headers = response.headers
-        
-        # Check for security-relevant headers
-        security_headers = {
-            'Content-Security-Policy': 'default-src \'self\'',
-            'X-Content-Type-Options': 'nosniff',
-            'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-            'Referrer-Policy': 'no-referrer',
-            'X-Frame-Options': 'DENY'
-        }
 
-
-    
-        
         # Check if each security header is present in the response
         results = {}
         for (header, description) in HEADERS.HEADERS.items():
