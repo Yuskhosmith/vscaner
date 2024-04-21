@@ -1,4 +1,4 @@
-import clickjack
+import headers
 import header_scanner
 
 def main():
